@@ -1,0 +1,132 @@
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+header > nav {
+  display: none;
+}
+header > button {
+  background-color: transparent;
+  border: none;
+}
+/* section one */
+.intro {
+  padding: 16px;
+}
+.intro img {
+  width: 100%;
+}
+.desktop {
+  display: none;
+}
+
+.intro h1 {
+  font-size: 45px;
+}
+
+.intro .lower-left a {
+  background-color: hsl(5, 85%, 63%);
+  color: black;
+  text-decoration: none;
+  padding: 6px 20px;
+  display: block;
+  width: fit-content;
+}
+
+.intro .right-side {
+  background-color: black;
+  color: rgb(182, 179, 179);
+  padding: 18px;
+  margin-top: 20px; /*remove on desktop */
+}
+
+.intro .right-side ul {
+  list-style-type: none;
+  padding: 0;
+}
+.intro h2 {
+  color: hsl(35, 77%, 62%);
+}
+.intro h3 {
+  color: white;
+}
+/* section two */
+
+.newslist {
+  padding: 16px;
+}
+
+.newslist ul {
+  padding: 0;
+  list-style-type: none;
+}
+.newslist ul li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.newslist ul li h2 {
+  margin: 0 10px;
+}
+.newslist ul li span {
+  color: hsl(35, 77%, 62%);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.newslist ul li img {
+  width: 100%;
+}
+.newslist ul li div:first-child {
+  flex: 1;
+}
+.newslist ul li div:last-child {
+  flex: 2;
+}
+
+@media (min-width: 730px) {
+  header > nav {
+    display: block;
+  }
+  header > nav a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  header > button {
+    display: none;
+  }
+
+  .intro {
+    display: flex;
+    gap: 25px;
+  }
+  .intro .left-side {
+    flex: 2.4;
+  }
+  .intro .right-side {
+    flex: 1;
+    margin: 0;
+  }
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  .intro .lower-left {
+    display: flex;
+    gap: 10px;
+  }
+  .intro .lower-left > * {
+    flex: 1;
+  }
+
+  .newslist ul {
+    display: flex;
+  }
+}
